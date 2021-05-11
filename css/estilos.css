@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(82, 82, 82, 0.705);
+}
+.calcu{
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-top: 10px;
+    width: 300px;
+    height: 450px;
+    background-color: rgb(163, 0, 0);
+    box-shadow: 0px 0px 25px black;
+    border-radius: 20px ;
+}
+#resultado{
+    display: block;
+    background-color: rgb(190, 190, 190);
+    width: 90%;
+    height: 60px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding-top: 2%;
+    text-align: center;
+    font-size: 40px;
+    overflow: auto;
+}
+.resultado::-webkit-scrollbar{
+    background-color: none;
+    height: 5px;
+}
+.resultado::-webkit-scrollbar-thumb{
+    background-color: red;
+    border-radius: 7px;
+    box-shadow: 20px 20px 0px 0px black;
+}
+.botones{
+    text-align: center;
+}
+button{
+    width: 60px;
+    height: 45px;
+    font-size: 28px;
+
+}
+
+.icon{
+    display: block;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.icon-soccer{
+    display: block;
+    margin-top: 30px;
+    font-size: 100px;
+    color: rgb(150, 0, 0);
+}
+
+
