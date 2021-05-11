@@ -64,3 +64,10 @@ button{
 }
 
 
+@media screen and (max-width:900px ) {
+    .calcu{
+        margin-top: 0px;
+        width: 350px;
+    }
+
+}
