@@ -110,7 +110,7 @@ igual.onclick= function i(){
   var res=0;
   switch(signo){
     case "+":
-        res=parseInt(num1)+parseInt(num2);
+        res=num1+num2;
          break;
     case "-":
         res=num1-num2;
