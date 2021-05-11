@@ -14,6 +14,7 @@ function main(){
    var ocho=document.getElementById("ocho");
    var nueve=document.getElementById("nueve");
    var cero=document.getElementById("cero");
+   var punto=document.getElementById("punto");
    var multi=document.getElementById("multi");
    var division=document.getElementById("division");
    var resta=document.getElementById("resta");
@@ -21,6 +22,7 @@ function main(){
    var igual=document.getElementById("igual");
    var reset=document.getElementById("reset");
    var resultado=document.getElementById("resultado");
+   var resultadoP=document.getElementById("resultadoP");
    
    //eventos
 
@@ -66,6 +68,13 @@ cero.onclick=function e(){
     resultado.textContent=resultado.textContent + "0" ;
 
 }
+punto.onclick=function e(){
+    
+    resultado.textContent=resultado.textContent + "." ;
+
+}
+
+
 
 //RESET
 
@@ -74,6 +83,8 @@ reset.onclick=function reset(){
     num1=0;
     num2=0;
     signo="";
+    resultadoP.textContent="";
+    resetColor();
  }
 
  
@@ -82,35 +93,48 @@ reset.onclick=function reset(){
 //SUMAR
   suma.onclick=function s(){
     num1=resultado.textContent;
+    resultadoP.textContent=resultado.textContent + "+";
+    resultadoP.style.color="black";
     signo="+";
     resultado.textContent="";
+    suma.style.backgroundColor= "#74e7ed";
 }
   resta.onclick=function s(){
     num1=resultado.textContent;
+    resultadoP.textContent=resultado.textContent + "-";
+    resultadoP.style.color="black";
     signo="-";
     resultado.textContent="";
+    resta.style.backgroundColor= "#74e7ed";
   }
   division.onclick=function s(){
     num1=resultado.textContent;
+    resultadoP.textContent=resultado.textContent + "/";
+    resultadoP.style.color="black";
     signo="/";
     resultado.textContent="";
+    division.style.backgroundColor= "#74e7ed";
   }
   multi.onclick=function s(){
     num1=resultado.textContent;
+    resultadoP.textContent=resultado.textContent + "x";
+    resultadoP.style.color="black";
     signo="*";
     resultado.textContent="";
+    multi.style.backgroundColor= "#74e7ed";
   }
 
 
 
 //IGUAL
 igual.onclick= function i(){
+
   num2=resultado.textContent;
   
   var res=0;
   switch(signo){
     case "+":
-        res=num1+num2;
+        res=parseFloat(num1)+parseFloat(num2);
          break;
     case "-":
         res=num1-num2;
@@ -123,10 +147,20 @@ igual.onclick= function i(){
         break;
     default: alert("ERROR");              
     }
+    resultadoP.textContent+=num2;
+    resultadoP.style.color="rgb(190, 190, 190)";
     num1=0;
     num2=0;
     signo="";
     resultado.textContent=res;
-     
+    resetColor();
+}
+
+function resetColor(){
+    multi.style.backgroundColor="#ffffff";
+    division.style.backgroundColor="#ffffff";
+    resta.style.backgroundColor="#ffffff";
+    suma.style.backgroundColor="#ffffff";
 }
 }
+
